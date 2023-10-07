@@ -51,6 +51,7 @@ Characters refer to the characters competing in the dodgeball match, controlled 
 	- Characters can move in all directions on their side of the field. Moving backwards is slower than moving forwards.
 - Dodging
 	- Dodging allows for a short burst of strength, as well as a small window of invincibility.
+	- Dodge recovery determines how long a character takes to be able to dodge again.
 - Throw
 	- When holding the ball, the action button will cause the character start the throwing action
 	- Pressing the throw button charges the throw. Releasing the button will cause the character to release the throw.
@@ -59,3 +60,23 @@ Characters refer to the characters competing in the dodgeball match, controlled 
 	- All characters have a special throw whose properties vary per character.
 - Catching the Ball
 	- When not holding the ball, the action button will cause the character to attempt to catch the ball. The character will assume a catching stance for a short time, dictated by the Skill stat. If they are to be hit by the ball, they will catch the ball and nullify damage instead.
+- Changing Characters / Passing the Ball
+	- If the player's team has the ball, the pass button will pass the ball from character to character. The player assumes control of the character with the ball.
+	- If the player's team does not control the ball, the pass button will pass control to another character
+	- In both instances, the using the pass action causes the passing character to shoot a group of raycasts in the direction they are moving. If not moving, the pass will be random. The character on the team that is closest and is hit by at least one raycast will be the target to pass to.
+	- If no target is detected while holding the ball, the pass will turn into a 'soft' throw in that direction.
+	- If no target is detected and the ball is outside of the player's control, character control will be passed to a random character.
+	
+## Project Plan and Milestones
+- Prototype
+	- Prototype of the 4 character archetypes
+	- Players must be able to join the game
+	- All player actions are implemented (movement, passing, etc)
+	- Players must be able to pick up and throw the ball
+	- Must be able to damage characters
+	- An actual field that bounces the ball off the walls
+	- Prototype UI
+		- Character Health
+		- Match Results
+			- Who won?
+			- Rematch or Quit

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4c0sqblpssa"]
+
+[ext_resource type="Script" path="res://Systems/Player/Player.gd" id="1_fsyqo"]
+[ext_resource type="Script" path="res://Systems/Player/PlayerInputs.gd" id="2_am5fb"]
+
+[node name="PlayerSystems" type="Node"]
+script = ExtResource("1_fsyqo")
+
+[node name="Inputs" type="Node" parent="."]
+script = ExtResource("2_am5fb")
