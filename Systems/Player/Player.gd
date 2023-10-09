@@ -12,6 +12,7 @@ var input_actions:PlayerInputs
 func _ready() -> void:
 	input_actions = $Inputs
 	BuildTeamGameplay()
+	input_actions.pass_action.connect(PassControlToNextCharacter)
 
 func BuildTeamGameplay()->void:
 	if team_members.size() < 3:
@@ -36,6 +37,18 @@ func _PutCharactersOnField()->void:
 		field_char_index += 1
 	field_char_index = 0
 	GiveControlToCharacterIndex()
+
+func PassControlToNextCharacter()->void:
+	# cleanup logic for old controlled character should go here
+	field_characters[field_char_index].velocity = Vector2.ZERO
+	field_characters[field_char_index].is_controlled_by_player = false
+	# cleanup logic for old controlled character should go here
+	field_char_index += 1
+	if field_char_index > field_characters.size() - 1:
+		field_char_index = 0
+	# setup logic for new controlled character should go here
+	field_characters[field_char_index].is_controlled_by_player = true
+	# setup logic for new controlled character should go here
 
 func GiveControlToCharacterIndex()->void:
 	field_characters[field_char_index].is_controlled_by_player = true
