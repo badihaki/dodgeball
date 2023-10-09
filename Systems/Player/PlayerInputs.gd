@@ -2,7 +2,6 @@ extends Node
 class_name PlayerInputs
 
 @export var movement:Vector2
-signal move_action
 signal throw_action
 signal pass_action
 signal dodge_action

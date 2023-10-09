@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtrqgvu0yidyu"]
+[gd_scene load_steps=3 format=3 uid="uid://dtrqgvu0yidyu"]
 
 [ext_resource type="PackedScene" uid="uid://c4c0sqblpssa" path="res://Systems/Player/player.tscn" id="1_hvsld"]
+[ext_resource type="PackedScene" uid="uid://cx32csicwajfh" path="res://Content/Characters/Bella/Bella.tscn" id="2_bgjba"]
 
 [node name="World" type="Node2D"]
 
 [node name="PlayerSystems" parent="." instance=ExtResource("1_hvsld")]
+
+[node name="Bella" parent="." node_paths=PackedStringArray("controlling_player") instance=ExtResource("2_bgjba")]
+position = Vector2(101, 109)
+is_controlled_by_player = true
+controlling_player = NodePath("../PlayerSystems")
