@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgrx5yseidr4b"]
+
+[ext_resource type="Script" path="res://Systems/Character/Character.gd" id="1_y73xn"]
+[ext_resource type="Texture2D" uid="uid://bip628x8ka3ky" path="res://Content/Characters/Shmiv/Shmiv-model.png" id="2_7c826"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xklk7"]
+height = 114.0
+
+[node name="Shmiv" type="CharacterBody2D"]
+script = ExtResource("1_y73xn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_7c826")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 15)
+shape = SubResource("CapsuleShape2D_xklk7")
