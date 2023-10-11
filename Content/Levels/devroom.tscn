@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtrqgvu0yidyu"]
+[gd_scene load_steps=6 format=3 uid="uid://dtrqgvu0yidyu"]
 
 [ext_resource type="PackedScene" uid="uid://c4c0sqblpssa" path="res://Systems/Player/player.tscn" id="1_hvsld"]
 [ext_resource type="PackedScene" uid="uid://cx32csicwajfh" path="res://Content/Characters/Bella/Bella.tscn" id="2_pwv7o"]
 [ext_resource type="PackedScene" uid="uid://v6fofyo7k4n5" path="res://Content/Characters/Broderik/Broderik.tscn" id="3_ksc8r"]
 [ext_resource type="PackedScene" uid="uid://dgrx5yseidr4b" path="res://Content/Characters/Shmiv/Shmiv.tscn" id="4_do4cm"]
+[ext_resource type="PackedScene" uid="uid://c6wcopkk0xchc" path="res://Content/Balls/Ball.tscn" id="5_4cofe"]
 
 [node name="World" type="Node2D"]
 
@@ -20,3 +21,5 @@ position = Vector2(575, 325)
 
 [node name="BotSpawn" type="Node2D" parent="Spawn"]
 position = Vector2(575, 550)
+
+[node name="Ball" parent="." instance=ExtResource("5_4cofe")]

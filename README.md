@@ -80,3 +80,10 @@ Characters refer to the characters competing in the dodgeball match, controlled 
 		- Match Results
 			- Who won?
 			- Rematch or Quit
+
+### Current Task
+- Get both player teams spawning
+- Start on Ball Logic
+	- Ball States should be enumerations
+	- Ball Hitbox should be active only during active state
+- Character hitboxes need to be in affect
